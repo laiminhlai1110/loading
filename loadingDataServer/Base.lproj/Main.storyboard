@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="loadingDataServer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Họ Tên" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rgu-ik-yLW">
+                                <rect key="frame" x="20" y="61" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="DG8-Xk-mHI"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Năm Sinh" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XTq-on-mVH">
+                                <rect key="frame" x="20" y="121" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="gLk-jO-b03"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mlc-CX-HGR">
+                                <rect key="frame" x="0.0" y="344" width="414" height="518"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CELL" rowHeight="254" id="LE6-yD-kGy" customClass="svTableViewCell" customModule="loadingDataServer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="254"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LE6-yD-kGy" id="ud3-YO-f1d">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="253.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="hoten" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4E-yg-7pJ" userLabel="hoten">
+                                                    <rect key="frame" x="55" y="32" width="44" height="45"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="namsinh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1e-uR-Egu" userLabel="namsinh">
+                                                    <rect key="frame" x="55" y="99" width="65" height="45"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="HOTEN" destination="k4E-yg-7pJ" id="Seo-zO-o4Z"/>
+                                            <outlet property="NAMSINH" destination="q1e-uR-Egu" id="TTG-yy-qW3"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ZYs-P3-19Q"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="2c3-EN-aSj"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVW-wk-9a1">
+                                <rect key="frame" x="40" y="211" width="334" height="30"/>
+                                <color key="backgroundColor" red="0.69803923369999998" green="0.8627451062" blue="0.062745101750000004" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <state key="normal" title="Thêm Sinh Viên "/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mlc-CX-HGR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="300" id="DBc-mX-2Uo"/>
+                            <constraint firstItem="rgu-ik-yLW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="17" id="Eyg-LW-LGM"/>
+                            <constraint firstItem="mlc-CX-HGR" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="JaF-5w-vCr"/>
+                            <constraint firstItem="XTq-on-mVH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="OEF-NG-TWl"/>
+                            <constraint firstItem="mlc-CX-HGR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="UcV-Ds-qYB"/>
+                            <constraint firstItem="mlc-CX-HGR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VjY-sY-XnF"/>
+                            <constraint firstItem="VVW-wk-9a1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="YWN-n0-4uP"/>
+                            <constraint firstItem="VVW-wk-9a1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="167" id="bgg-Un-WBh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XTq-on-mVH" secondAttribute="trailing" constant="20" id="fWI-am-CoL"/>
+                            <constraint firstItem="XTq-on-mVH" firstAttribute="top" secondItem="rgu-ik-yLW" secondAttribute="bottom" constant="20" id="g5T-bx-4xU"/>
+                            <constraint firstItem="rgu-ik-yLW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mv5-HW-y0t"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VVW-wk-9a1" secondAttribute="trailing" constant="40" id="pqz-hy-Fho"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rgu-ik-yLW" secondAttribute="trailing" constant="20" id="t2Z-70-7iI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnAdd" destination="VVW-wk-9a1" id="7cy-z9-sQO"/>
+                        <outlet property="tableView" destination="mlc-CX-HGR" id="zAG-Cd-Hxc"/>
+                        <outlet property="txt1" destination="rgu-ik-yLW" id="vIT-8x-osf"/>
+                        <outlet property="txt2" destination="XTq-on-mVH" id="7QU-OJ-G3n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="105.80357142857143"/>
+        </scene>
+    </scenes>
+</document>
