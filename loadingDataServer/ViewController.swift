@@ -22,9 +22,9 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         let url = URL(string: "http://10.0.0.121:3000")
         var req = URLRequest(url: url!)
         req.httpMethod = "GET"
-//        let s = String(format: "HOTEN=%@&NAMSINH=%@", txt1.text!,txt2.text!)
-//        let d = s.data(using: String.Encoding.utf8)
-//        req.httpBody = d
+    //    let s = String(format: "HOTEN=%@&NAMSINH=%@", txt1.text!,txt2.text!)
+    //    let d = s.data(using: String.Encoding.utf8)
+    //    req.httpBody = d
 
         let task = URLSession.shared.dataTask(with: url!) { (dt:Data?, ur:URLResponse?, e:Error?) in
             
@@ -38,7 +38,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
                     
                     
                 }catch{
-                    print("errorsssss")
+                    print("errors")
                 }
             
             }
